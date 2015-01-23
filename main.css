@@ -1,0 +1,98 @@
+body{
+}
+
+nav{
+    clear:both;
+    background-color:transparent;
+    margin-right:.500em;
+}
+
+a:link{
+    color:white;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+a:visited{
+    color:grey;
+}
+
+a:hover {
+    color: #2e8afd;
+    text-decoration: none;
+}
+
+a:active {
+    color: #2e8afd;
+    text-decoration:underline;
+    background-color:grey;
+    padding-top:10px;
+}
+
+nav li {
+    padding:0.500em;
+    display: inline;
+    color:white;
+}
+
+.jumbotron {
+    height:55em;
+    background-size:cover;
+    /*margin-left:-4.688em;*/
+    margin-top:-2.188em;
+    margin-bottom:0em;
+    background-position: center;
+    border-bottom: dashed;
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url('IMG_6101_mini.JPG');
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url('IMG_6101_mini.JPG');
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url('IMG_6101_mini.JPG');
+
+}
+
+.jumbotron h3 {
+    text-align:center;
+    padding-top:2em;
+    color: white;
+    font-size:4.5em;
+    font-family:'lato', sans-serif;
+    font-weight:100;
+}
+
+.jumbotron h3 span{
+    color:#2e8afd;
+}
+
+.jumbotron p {
+    text-align:center;
+    font-family:'lato', sans-serif;
+    font-size: 2.0em;
+    color: #fff;
+    font-weight:100;
+}
+
+.jumbotron .social-media{
+text-align:center;
+
+}
+.More-info h3{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.More-info p{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size:1.000em;
+    margin-bottom:0.813em;
+
+}
+
+.More-info{
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('rsz_img_6095_mini.jpg');
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('rsz_img_6095_mini.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('rsz_img_6095_mini.jpg');
+    background-size:cover;
+    height:60em;
+    margin-bottom:0;
+}
+
