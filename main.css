@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 html {
 
     background: url("images/IMG_6101_mini.JPG") no-repeat center center fixed;
@@ -11,18 +15,18 @@ html {
     background-size: cover;
 
 }
-nav{
+.main-nav{
     width:100%;
     text-align: right;
     display: inline-block;
     list-style: none;
     top: .5em;
     background-color:transparent;
-    font-family: sans-serif;
+    font-family: 'Open sans', sans-serif;
 }
 
 a:link{
-    color:white;
+    color:grey;
     text-transform: uppercase;
     font-size: 0.7em;
     text-decoration: none;
@@ -41,18 +45,19 @@ a:active {
     color: #2e8afd;
     text-decoration:underline;
     background-color:grey;
-    padding-top:10px;
 }
 
-nav a {
+.main-nav a {
     padding:0.75em;
-    color:white;
+    color:grey;
     display: inline-block;
+
 }
 
 .title {
     clear: both;
     position:relative;
+    display: block;
     top:10em;
 }
 
@@ -62,6 +67,7 @@ nav a {
     color: white;
     font-size:5em;
     font-family:'lato', sans-serif;
+    font-weight: 100;
     margin:0;
     padding: 0;
 }
@@ -70,7 +76,9 @@ nav a {
     color:#2e8afd;
 }
 
-.title p {
+.title p,
+.title p a
+{
     letter-spacing: 2px;
     position:relative;
     text-align:center;
@@ -96,9 +104,10 @@ nav a {
 }
 
 .More-info{
-    background-image: -webkit-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('images/rsz_img_6095_mini.jpg');
-    background-image: -moz-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('images/rsz_img_6095_mini.jpg');
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('images/rsz_img_6095_mini.jpg');
+    border: 2px solid pink;
+
+    display: block;
+    background-color: transparent;
     background-size:cover;
     height:60em;
 
@@ -106,77 +115,94 @@ nav a {
 
 
 
-@media screen and (max-width: 401px){
-/*For screen sizes up to 401 px*/
+@media screen and (max-width: 492px) {
+    /*For screen sizes up to 492 px*/
+    #photo-link,
+    #blog-link {
+        display: none;
+    }
 
-    nav{
-        float:none;
-        background-color:transparent;
+    .main-nav {
+        float: none;
+        background-color: transparent;
         margin: 0 auto;
-        text-align:center;
-    }
-
-    nav a{
         text-align: center;
-        padding-left: auto;
-        padding-right:auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
     }
 
+    .main-nav li {
+        margin: 0;
+    }
+
+    .main-nav a {
+        text-align: center;
+    }
 
     .title h3 {
         color: white;
-        font-size: 1em;
         letter-spacing: 0;
     }
-    .title p{
-        letter-spacing: 0;
-        font-size:.25em;
 
+    .title p {
+        letter-spacing: 0;
     }
 
-/*Instagram tag*/
-
-#smallIGButton{
+    /*Instagram tag*/
+    #smallIGButton {
         display: none;
-        margin-bottom:1em;
-        padding:auto;
+        margin-bottom: 1em;
+        padding: auto;
     }
 
-    #smallTwitterButton{
-        display:inline-block;
+    #smallTwitterButton {
+        display: inline-block;
         position: relative;
-        padding:auto;
-    }
-    #normalTwitterButton{
-        display:none;
+        padding: auto;
     }
 
-    #normalIGButton{
-        display:none;
+    #normalTwitterButton {
+        display: none;
+    }
+
+    #normalIGButton {
+        display: none;
     }
 
     .More-info {
-        padding-left:1em;
-        padding-top:.5em;
+        padding-left: 1em;
+        padding-top: .5em;
         height: 50%;
     }
 
-    .More-info h3{
-        font-size:1.5em;
-    }
-    .More-info p{
-        font-size:.75em;
+    .More-info h3 {
+        font-size: 1.5em;
     }
 
+    .More-info p {
+        font-size: .75em;
+    }
 
+    #orig-title-p{
+        display:none;
+    }
+
+    .title #alt-title-p{
+        display:flex;
+        justify-content: center;
+    }
 
 }
 
+
+
 @media screen and (max-width: 915px){
-/*For screen sizes between 402 and 915 px*/
+/*For screen sizes between 493 and 915 px*/
 
 
-    nav{
+    .main-nav{
     text-align: center;
     }
 
@@ -228,36 +254,42 @@ nav a {
     .More-info p{
         font-size:.7em;
     }
+
+    #alt-title-p{
+        display:none;
+    }
 }
 
 
-@media screen and (min-width:769px){
-/*For screen sizes greater than 769 px*/
-
-
-
-/*Instagram tag*/
-
-
-    #smallIGButton{
+@media screen and (min-width:916px) {
+    /*For screen sizes greater than 916 px*/
+    /*Instagram tag*/
+    #smallIGButton {
         display: none;
     }
 
-    #smallTwitterButton{
-        display:none
+    #smallTwitterButton {
+        display: none
     }
 
     .More-info {
-        padding-left:1em;
-        padding-top:.5em;
+        padding-left: 1em;
+        padding-top: .5em;
         height: 50%;
     }
 
-    .More-info h3{
-        font-size:1.5em;
+    .More-info h3 {
+        font-size: 1.5em;
     }
-    .More-info p{
-        font-size:.75em;
+
+    .More-info p {
+        font-size: .75em;
     }
+    #alt-title-p{
+        display:none;
+    }
+
 }
+
+
 
